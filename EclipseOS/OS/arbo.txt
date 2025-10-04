@@ -1,0 +1,44 @@
+.
+├── arbo.txt
+├── boot
+│   └── boot.asm
+├── common
+├── grub.cfg
+├── include
+│   ├── console.h
+│   ├── diskpart.h
+│   ├── input.h
+│   ├── kernel.h
+│   ├── keyboard.h
+│   ├── kstring.h
+│   ├── pci.h
+│   ├── ports.h
+│   ├── print.h
+│   ├── tinyprintf.h
+│   └── video.h
+├── iso
+│   └── boot
+│       ├── grub
+│       └── kernel.bin
+├── kernel32
+├── kernel64
+├── launchqemu.sh
+├── linker.ld
+├── Makefile
+├── Makefile.bak
+├── os-image.bin
+└── src
+    ├── console.c
+    ├── diskpart.c
+    ├── input.c
+    ├── kernel.c
+    ├── memory.c
+    ├── mf_stub.c
+    ├── multiboot_header.S
+    ├── pci.c
+    ├── ports.c
+    ├── print.c
+    ├── string.c
+    └── video.c
+
+10 directories, 32 files
