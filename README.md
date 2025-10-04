@@ -8,6 +8,14 @@ Any redistribution, whether modified or unmodified, **must include clear attribu
 This includes documentation, user interfaces, and public-facing materials.
 
 ---
+## Versions
+Releases are named after some silly names...
+
+**Here are the available releases so far:**
+- Stupei (Alpha a0.1) CODENAME: stupei
+- Tartarus (Beta b0.1) *unavailable at the moment* CODENAME: d1
+- Orpheus (Release v1.0) *unavailable at the moment* CODENAME: orpheus
+---
 
 ## 🚀 How to Run ThanatOS (EclipseCore)
 
