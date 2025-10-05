@@ -1,8 +1,11 @@
 # 🧠 ThanatOS  
 Runs under moonlight and broken dreams.
-ThanatOS is light, easy and open-source!
+
 ---
 
+---
+ThanatOS is light, easy and open-source!
+---
 ## 📜 Attribution Notice
 Any redistribution, whether modified or unmodified, **must include clear attribution** to the original author and project name.  
 This includes documentation, user interfaces, and public-facing materials.
