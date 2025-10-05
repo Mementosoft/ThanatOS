@@ -1,6 +1,6 @@
 # 🧠 ThanatOS  
 Runs under moonlight and broken dreams.
-
+ThanatOS is light, easy and open-source!
 ---
 
 ## 📜 Attribution Notice
