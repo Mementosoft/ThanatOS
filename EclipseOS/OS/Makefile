@@ -14,11 +14,8 @@ CFLAGS  := -m32 -ffreestanding -nostdlib -fno-pie -fno-stack-protector -I$(INCLU
 LDFLAGS := -m elf_i386 -T linker.ld
 
 # === Files ===
-SOURCES := $(wildcard $(SRC)/*.c)
-OBJECTS := $(patsubst $(SRC)/%.c,$(BUILD)/%.o,$(SOURCES)) build/tinyprintf.o build/sprintf.o build/console_helpers.o
-# Compile tinyprintf.c separately if not already included
-$(BUILD)/tinyprintf.o: $(SRC)/tinyprintf.c | $(BUILD)
-	$(CC) $(CFLAGS) -c $< -o $@
+SOURCES := $(wildcard $(SRC)/*.c $(SRC)/common/gest/*.c $(SRC)/common/Programs/*.c $(SRC)/common/updates/*.c)
+OBJECTS := $(patsubst $(SRC)/%.c,$(BUILD)/%.o,$(SOURCES))
 
 BOOT       := boot
 BOOT_BIN   := $(BUILD)/boot.bin
@@ -46,10 +43,11 @@ $(HEADER_OBJ): $(HEADER) | $(BUILD)
 
 # === Compile C sources ===
 $(BUILD)/%.o: $(SRC)/%.c | $(BUILD)
+	@mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 # === Link kernel ===
-$(KERNEL_BIN): $(HEADER_OBJ) $(OBJECTS) build/print.o
+$(KERNEL_BIN): $(HEADER_OBJ) $(OBJECTS)
 	$(LD) $(LDFLAGS) -o $@ $^
 
 # === Raw bootable image ===
@@ -88,6 +86,3 @@ clean:
 	rm -rf $(BUILD) iso
 
 .PHONY: all clean run run-iso disk run-disk iso
-
-build/print.o: src/print.c
-	$(CC) $(CFLAGS) -c src/print.c -o build/print.o

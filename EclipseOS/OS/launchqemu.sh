@@ -15,4 +15,6 @@ qemu-system-i386 \
   -drive file="$DISK_IMG",format=raw,if=ide \
   -m "${RAM_SIZE}M" \
   -boot d \
-  -vga std
+  -vga std \
+  -audiodev alsa,id=snd0 \
+  -device sb16,audiodev=snd0
